@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 科技简报 · 2026.03.13</title>
+<meta name="description" content="每日 AI 与科技新闻简报">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&family=Noto+Sans+SC:wght@300;400;500&family=ZCOOL+XiaoWei&display=swap');
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ink:#1a1a1a;--ink2:#3a3a3a;--ink3:#777;--ink4:#aaa;
+  --paper:#f8f6f0;--paper2:#f0ede4;--rule:#c8c2b0;--rule2:#ddd8cc;
+  --red:#c0392b;--blue:#1a3a6b;
+  --serif:'Noto Serif SC','SimSun',serif;
+  --sans:'Noto Sans SC','PingFang SC',sans-serif;
+  --display:'ZCOOL XiaoWei','Noto Serif SC',serif;
+  --col:680px;
+}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:var(--serif);font-size:15px;line-height:1.75;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+a:hover{color:var(--red)}
+
+/* ── Masthead ── */
+.masthead{
+  border-bottom:3px double var(--ink);
+  padding:16px 0 12px;text-align:center;
+  background:var(--paper);position:sticky;top:0;z-index:100;
+}
+.masthead-meta{
+  font-family:var(--sans);font-size:11px;color:var(--ink3);
+  letter-spacing:1px;margin-bottom:6px;
+  display:flex;justify-content:center;gap:20px;
+}
+.masthead-title{
+  font-family:var(--display);font-size:42px;
+  letter-spacing:8px;color:var(--ink);line-height:1;margin-bottom:8px;
+}
+.masthead-title em{color:var(--red);font-style:normal}
+.masthead-sub{
+  font-family:var(--sans);font-size:11px;color:var(--ink3);
+  letter-spacing:3px;
+  border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);
+  padding:4px 0;margin:0 auto;max-width:500px;
+}
+
+/* ── Nav ── */
+.nav-strip{
+  border-bottom:1px solid var(--rule);
+  overflow-x:auto;white-space:nowrap;scrollbar-width:none;
+  background:var(--paper);
+}
+.nav-strip::-webkit-scrollbar{display:none}
+.nav-inner{display:inline-flex;padding:0 20px;min-width:100%}
+.nav-item{
+  font-family:var(--sans);font-size:12px;font-weight:500;
+  color:var(--ink3);padding:8px 14px;cursor:pointer;
+  border-bottom:2px solid transparent;transition:color .15s,border-color .15s;
+  letter-spacing:.5px;flex-shrink:0;
+}
+.nav-item:hover{color:var(--red)}
+.nav-item.active{color:var(--red);border-bottom-color:var(--red)}
+
+/* ── Page ── */
+.page{max-width:var(--col);margin:0 auto;padding:0 20px}
+
+/* ── Date bar ── */
+.date-bar{
+  padding:10px 0 6px;border-bottom:1px solid var(--rule);
+  display:flex;align-items:baseline;justify-content:space-between;
+}
+.date-main{font-family:var(--display);font-size:28px;letter-spacing:2px}
+.date-sub{font-family:var(--sans);font-size:11px;color:var(--ink3);letter-spacing:1px}
+
+/* ── Lead section ── */
+.lead-section{padding:20px 0 0;border-bottom:2px solid var(--ink)}
+.section-label{
+  font-family:var(--sans);font-size:10px;font-weight:500;
+  letter-spacing:3px;color:var(--ink3);text-transform:uppercase;margin-bottom:14px;
+}
+.lead-story{margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid var(--rule2)}
+.lead-story:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.cat-tag{
+  font-family:var(--sans);font-size:10px;font-weight:500;
+  letter-spacing:2px;color:var(--red);text-transform:uppercase;margin-bottom:5px;
+}
+.story-title{font-size:18px;font-weight:700;line-height:1.4;color:var(--ink);margin-bottom:7px}
+.story-desc{font-family:var(--sans);font-size:13px;color:var(--ink2);line-height:1.7;margin-bottom:8px}
+.story-meta{
+  display:flex;align-items:center;gap:14px;
+  font-family:var(--sans);font-size:11px;color:var(--ink3);
+}
+.story-meta .src{font-weight:500;color:var(--ink2)}
+.story-meta a:hover{color:var(--red)}
+
+/* ── Category sections ── */
+.cat-section{border-bottom:1px solid var(--rule);padding:20px 0}
+.cat-section:last-child{border-bottom:none}
+.cat-header{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.cat-name{
+  font-family:var(--serif);font-size:14px;font-weight:700;
+  letter-spacing:2px;padding-left:10px;border-left:3px solid var(--ink);
+}
+.cat-count{font-family:var(--sans);font-size:11px;color:var(--ink3)}
+.cat-rule{flex:1;height:1px;background:var(--rule2)}
+
+/* ── News item ── */
+.news-item{
+  display:grid;grid-template-columns:3px 1fr;gap:0 14px;
+  margin-bottom:14px;padding-bottom:14px;
+  border-bottom:1px dashed var(--rule2);
+}
+.news-item:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.news-rule{background:var(--rule2);border-radius:2px;margin-top:5px}
+.news-title{font-size:14px;font-weight:600;line-height:1.5;color:var(--ink);margin-bottom:4px}
+.news-desc{font-family:var(--sans);font-size:12px;color:var(--ink2);line-height:1.65;margin-bottom:5px}
+.news-meta{
+  display:flex;align-items:center;gap:12px;
+  font-family:var(--sans);font-size:11px;color:var(--ink4);
+}
+.news-meta .src{color:var(--ink3);font-weight:500}
+.news-meta a{color:var(--ink4)}
+.news-meta a:hover{color:var(--red)}
+
+/* ── Empty ── */
+.empty{
+  text-align:center;padding:80px 20px;
+  font-family:var(--sans);font-size:13px;color:var(--ink3);
+}
+
+/* ── Footer ── */
+.site-footer{
+  border-top:3px double var(--rule);padding:20px 0 48px;
+  text-align:center;font-family:var(--sans);font-size:11px;
+  color:var(--ink3);line-height:2;
+}
+
+/* ── Back to top ── */
+.back-top{
+  position:fixed;bottom:24px;right:24px;
+  width:36px;height:36px;background:var(--ink);color:var(--paper);
+  border:none;border-radius:50%;cursor:pointer;font-size:14px;
+  display:flex;align-items:center;justify-content:center;
+  opacity:0;transition:opacity .25s;z-index:99;
+}
+.back-top.show{opacity:1}
+.back-top:hover{background:var(--red)}
+
+@media(max-width:600px){
+  .masthead-title{font-size:28px;letter-spacing:4px}
+  .date-main{font-size:22px}
+  .story-title{font-size:16px}
+}
+</style>
+</head>
+<body>
+
+<div class="masthead">
+  <div class="masthead-meta" id="mastheadMeta"></div>
+  <div class="masthead-title">AI<em>·</em>简报</div>
+  <div class="masthead-sub">每日精选 · AI与科技 · 全网速递</div>
+</div>
+
+<div class="nav-strip">
+  <div class="nav-inner" id="navInner">
+    <div class="nav-item active" onclick="filterCat(null,this)">全部</div>
+    <div class="nav-item" onclick="filterCat('大模型与基础研究',this)">🧠 大模型</div>
+    <div class="nav-item" onclick="filterCat('产品与工具',this)">🛠️ 产品工具</div>
+    <div class="nav-item" onclick="filterCat('行业与公司动态',this)">🏢 行业动态</div>
+    <div class="nav-item" onclick="filterCat('投融资与市场',this)">💰 投融资</div>
+    <div class="nav-item" onclick="filterCat('开发者社区热议',this)">💬 开发者</div>
+    <div class="nav-item" onclick="filterCat('国际科技动态',this)">🌍 国际</div>
+  </div>
+</div>
+
+<div class="page">
+  <div class="date-bar">
+    <div class="date-main" id="dateMain"></div>
+    <div class="date-sub">共 <span id="totalCount">0</span> 条 · 今日速递</div>
+  </div>
+  <div class="lead-section" id="leadSection"></div>
+  <div id="catSections"></div>
+  <div class="site-footer">
+    <div>AI·简报 · 每日科技动态</div>
+    <div>内容来源于公开网络，仅供参考 · 生成于 <span id="genTime"></span></div>
+  </div>
+</div>
+
+<button class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script>
+/* ══════════════════════════════════════════════════════
+   ↓↓↓ Claude 每次生成简报时，只替换此区块内的内容 ↓↓↓
+   ══════════════════════════════════════════════════════ */
+const BRIEF_DATE = "2026-03-13";
+const BRIEF_ISSUE = "Vol.1";
+const NEWS_DATA = [
+  {
+    "title": "这里是示例头条：请点击「生成今日简报」更新内容",
+    "desc": "这是一条示例新闻。每次在 Claude 中发出「生成今日简报」指令后，Claude 会自动搜索当日 AI 科技新闻，并输出替换这里的新闻数据，将新 index.html 推送至 GitHub 后朋友即可看到最新内容。",
+    "category": "大模型与基础研究",
+    "time": "2026-03-13 09:00",
+    "source": "示例来源",
+    "link": ""
+  }
+];
+/* ══════════════════════════════════════════════════════
+   ↑↑↑ 以上区块由 Claude 每日自动替换 ↑↑↑
+   ══════════════════════════════════════════════════════ */
+
+const CATS=[
+  {name:'大模型与基础研究',icon:'🧠'},
+  {name:'产品与工具',icon:'🛠️'},
+  {name:'行业与公司动态',icon:'🏢'},
+  {name:'投融资与市场',icon:'💰'},
+  {name:'开发者社区热议',icon:'💬'},
+  {name:'国际科技动态',icon:'🌍'},
+];
+let activeFilter=null;
+
+function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;')}
+
+function render(news){
+  // masthead meta
+  const d=new Date(BRIEF_DATE+'T00:00:00');
+  const wd=['日','一','二','三','四','五','六'][d.getDay()];
+  document.getElementById('mastheadMeta').innerHTML=
+    `<span>📅 ${BRIEF_DATE.slice(0,4)}年${BRIEF_DATE.slice(5,7)}月${BRIEF_DATE.slice(8,10)}日 · 星期${wd}</span><span>🤖 AI 科技简报</span><span>📰 ${BRIEF_ISSUE}</span>`;
+  document.getElementById('dateMain').textContent=BRIEF_DATE.replace(/-/g,'.');
+  document.title=`AI 科技简报 · ${BRIEF_DATE}`;
+  document.getElementById('totalCount').textContent=news.length;
+  document.getElementById('genTime').textContent=new Date().toLocaleString('zh-CN');
+
+  // Lead: top 2
+  const leads=news.slice(0,2);
+  document.getElementById('leadSection').innerHTML=
+    `<div class="section-label">今日头条</div>`+
+    leads.map(n=>`
+      <div class="lead-story">
+        <div class="cat-tag">${esc(n.category)}</div>
+        <div class="story-title">${esc(n.title)}</div>
+        <div class="story-desc">${esc(n.desc)}</div>
+        <div class="story-meta">
+          ${n.source?`<span class="src">${esc(n.source)}</span>`:''}
+          ${n.time?`<span>${esc(n.time)}</span>`:''}
+          ${n.link?`<a href="${esc(n.link)}" target="_blank" rel="noopener">阅读原文 →</a>`:''}
+        </div>
+      </div>`).join('');
+
+  // Categories
+  const rest=news.slice(2);
+  const catsShow=activeFilter?CATS.filter(c=>c.name===activeFilter):CATS;
+  document.getElementById('catSections').innerHTML=catsShow.map(cat=>{
+    const items=rest.filter(n=>n.category===cat.name);
+    if(!items.length)return'';
+    return`<div class="cat-section">
+      <div class="cat-header">
+        <div class="cat-name">${cat.icon} ${cat.name}</div>
+        <div class="cat-count">${items.length} 条</div>
+        <div class="cat-rule"></div>
+      </div>
+      ${items.map(n=>`
+        <div class="news-item">
+          <div class="news-rule"></div>
+          <div class="news-content">
+            <div class="news-title">${esc(n.title)}</div>
+            <div class="news-desc">${esc(n.desc)}</div>
+            <div class="news-meta">
+              ${n.source?`<span class="src">${esc(n.source)}</span>`:''}
+              ${n.time?`<span>${esc(n.time)}</span>`:''}
+              ${n.link?`<a href="${esc(n.link)}" target="_blank" rel="noopener">原文 →</a>`:''}
+            </div>
+          </div>
+        </div>`).join('')}
+    </div>`;
+  }).join('');
+}
+
+function filterCat(cat,el){
+  activeFilter=cat;
+  document.querySelectorAll('.nav-item').forEach(n=>n.classList.remove('active'));
+  if(el)el.classList.add('active');
+  render(cat?NEWS_DATA.filter(n=>n.category===cat):NEWS_DATA);
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+window.addEventListener('scroll',()=>{
+  document.getElementById('backTop').classList.toggle('show',window.scrollY>400);
+});
+
+render(NEWS_DATA);
+</script>
+</body>
+</html>
