@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AI 科技简报 · 2026.03.13</title>
-<meta name="description" content="每日 AI 与科技新闻简报">
+<meta name="description" content="每日 AI 与科技新闻简报 · 2026年3月13日">
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&family=Noto+Sans+SC:wght@300;400;500&family=ZCOOL+XiaoWei&display=swap');
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -22,128 +22,56 @@ body{background:var(--paper);color:var(--ink);font-family:var(--serif);font-size
 a{color:inherit;text-decoration:none}
 a:hover{color:var(--red)}
 
-/* ── Masthead ── */
-.masthead{
-  border-bottom:3px double var(--ink);
-  padding:16px 0 12px;text-align:center;
-  background:var(--paper);position:sticky;top:0;z-index:100;
-}
-.masthead-meta{
-  font-family:var(--sans);font-size:11px;color:var(--ink3);
-  letter-spacing:1px;margin-bottom:6px;
-  display:flex;justify-content:center;gap:20px;
-}
-.masthead-title{
-  font-family:var(--display);font-size:42px;
-  letter-spacing:8px;color:var(--ink);line-height:1;margin-bottom:8px;
-}
+.masthead{border-bottom:3px double var(--ink);padding:16px 0 12px;text-align:center;background:var(--paper);position:sticky;top:0;z-index:100;}
+.masthead-meta{font-family:var(--sans);font-size:11px;color:var(--ink3);letter-spacing:1px;margin-bottom:6px;display:flex;justify-content:center;gap:20px;}
+.masthead-title{font-family:var(--display);font-size:42px;letter-spacing:8px;color:var(--ink);line-height:1;margin-bottom:8px;}
 .masthead-title em{color:var(--red);font-style:normal}
-.masthead-sub{
-  font-family:var(--sans);font-size:11px;color:var(--ink3);
-  letter-spacing:3px;
-  border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);
-  padding:4px 0;margin:0 auto;max-width:500px;
-}
+.masthead-sub{font-family:var(--sans);font-size:11px;color:var(--ink3);letter-spacing:3px;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:4px 0;margin:0 auto;max-width:500px;}
 
-/* ── Nav ── */
-.nav-strip{
-  border-bottom:1px solid var(--rule);
-  overflow-x:auto;white-space:nowrap;scrollbar-width:none;
-  background:var(--paper);
-}
+.nav-strip{border-bottom:1px solid var(--rule);overflow-x:auto;white-space:nowrap;scrollbar-width:none;background:var(--paper);}
 .nav-strip::-webkit-scrollbar{display:none}
 .nav-inner{display:inline-flex;padding:0 20px;min-width:100%}
-.nav-item{
-  font-family:var(--sans);font-size:12px;font-weight:500;
-  color:var(--ink3);padding:8px 14px;cursor:pointer;
-  border-bottom:2px solid transparent;transition:color .15s,border-color .15s;
-  letter-spacing:.5px;flex-shrink:0;
-}
+.nav-item{font-family:var(--sans);font-size:12px;font-weight:500;color:var(--ink3);padding:8px 14px;cursor:pointer;border-bottom:2px solid transparent;transition:color .15s,border-color .15s;letter-spacing:.5px;flex-shrink:0;}
 .nav-item:hover{color:var(--red)}
 .nav-item.active{color:var(--red);border-bottom-color:var(--red)}
 
-/* ── Page ── */
 .page{max-width:var(--col);margin:0 auto;padding:0 20px}
 
-/* ── Date bar ── */
-.date-bar{
-  padding:10px 0 6px;border-bottom:1px solid var(--rule);
-  display:flex;align-items:baseline;justify-content:space-between;
-}
+.date-bar{padding:10px 0 6px;border-bottom:1px solid var(--rule);display:flex;align-items:baseline;justify-content:space-between;}
 .date-main{font-family:var(--display);font-size:28px;letter-spacing:2px}
 .date-sub{font-family:var(--sans);font-size:11px;color:var(--ink3);letter-spacing:1px}
 
-/* ── Lead section ── */
 .lead-section{padding:20px 0 0;border-bottom:2px solid var(--ink)}
-.section-label{
-  font-family:var(--sans);font-size:10px;font-weight:500;
-  letter-spacing:3px;color:var(--ink3);text-transform:uppercase;margin-bottom:14px;
-}
+.section-label{font-family:var(--sans);font-size:10px;font-weight:500;letter-spacing:3px;color:var(--ink3);text-transform:uppercase;margin-bottom:14px;}
 .lead-story{margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid var(--rule2)}
 .lead-story:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
-.cat-tag{
-  font-family:var(--sans);font-size:10px;font-weight:500;
-  letter-spacing:2px;color:var(--red);text-transform:uppercase;margin-bottom:5px;
-}
+.cat-tag{font-family:var(--sans);font-size:10px;font-weight:500;letter-spacing:2px;color:var(--red);text-transform:uppercase;margin-bottom:5px;}
 .story-title{font-size:18px;font-weight:700;line-height:1.4;color:var(--ink);margin-bottom:7px}
 .story-desc{font-family:var(--sans);font-size:13px;color:var(--ink2);line-height:1.7;margin-bottom:8px}
-.story-meta{
-  display:flex;align-items:center;gap:14px;
-  font-family:var(--sans);font-size:11px;color:var(--ink3);
-}
+.story-meta{display:flex;align-items:center;gap:14px;font-family:var(--sans);font-size:11px;color:var(--ink3);}
 .story-meta .src{font-weight:500;color:var(--ink2)}
 .story-meta a:hover{color:var(--red)}
 
-/* ── Category sections ── */
 .cat-section{border-bottom:1px solid var(--rule);padding:20px 0}
 .cat-section:last-child{border-bottom:none}
 .cat-header{display:flex;align-items:center;gap:12px;margin-bottom:14px}
-.cat-name{
-  font-family:var(--serif);font-size:14px;font-weight:700;
-  letter-spacing:2px;padding-left:10px;border-left:3px solid var(--ink);
-}
+.cat-name{font-family:var(--serif);font-size:14px;font-weight:700;letter-spacing:2px;padding-left:10px;border-left:3px solid var(--ink);}
 .cat-count{font-family:var(--sans);font-size:11px;color:var(--ink3)}
 .cat-rule{flex:1;height:1px;background:var(--rule2)}
 
-/* ── News item ── */
-.news-item{
-  display:grid;grid-template-columns:3px 1fr;gap:0 14px;
-  margin-bottom:14px;padding-bottom:14px;
-  border-bottom:1px dashed var(--rule2);
-}
+.news-item{display:grid;grid-template-columns:3px 1fr;gap:0 14px;margin-bottom:14px;padding-bottom:14px;border-bottom:1px dashed var(--rule2);}
 .news-item:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
 .news-rule{background:var(--rule2);border-radius:2px;margin-top:5px}
 .news-title{font-size:14px;font-weight:600;line-height:1.5;color:var(--ink);margin-bottom:4px}
 .news-desc{font-family:var(--sans);font-size:12px;color:var(--ink2);line-height:1.65;margin-bottom:5px}
-.news-meta{
-  display:flex;align-items:center;gap:12px;
-  font-family:var(--sans);font-size:11px;color:var(--ink4);
-}
+.news-meta{display:flex;align-items:center;gap:12px;font-family:var(--sans);font-size:11px;color:var(--ink4);}
 .news-meta .src{color:var(--ink3);font-weight:500}
 .news-meta a{color:var(--ink4)}
 .news-meta a:hover{color:var(--red)}
 
-/* ── Empty ── */
-.empty{
-  text-align:center;padding:80px 20px;
-  font-family:var(--sans);font-size:13px;color:var(--ink3);
-}
+.site-footer{border-top:3px double var(--rule);padding:20px 0 48px;text-align:center;font-family:var(--sans);font-size:11px;color:var(--ink3);line-height:2;}
 
-/* ── Footer ── */
-.site-footer{
-  border-top:3px double var(--rule);padding:20px 0 48px;
-  text-align:center;font-family:var(--sans);font-size:11px;
-  color:var(--ink3);line-height:2;
-}
-
-/* ── Back to top ── */
-.back-top{
-  position:fixed;bottom:24px;right:24px;
-  width:36px;height:36px;background:var(--ink);color:var(--paper);
-  border:none;border-radius:50%;cursor:pointer;font-size:14px;
-  display:flex;align-items:center;justify-content:center;
-  opacity:0;transition:opacity .25s;z-index:99;
-}
+.back-top{position:fixed;bottom:24px;right:24px;width:36px;height:36px;background:var(--ink);color:var(--paper);border:none;border-radius:50%;cursor:pointer;font-size:14px;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .25s;z-index:99;}
 .back-top.show{opacity:1}
 .back-top:hover{background:var(--red)}
 
@@ -151,6 +79,7 @@ a:hover{color:var(--red)}
   .masthead-title{font-size:28px;letter-spacing:4px}
   .date-main{font-size:22px}
   .story-title{font-size:16px}
+  .masthead-meta{gap:12px;font-size:10px}
 }
 </style>
 </head>
@@ -163,7 +92,7 @@ a:hover{color:var(--red)}
 </div>
 
 <div class="nav-strip">
-  <div class="nav-inner" id="navInner">
+  <div class="nav-inner">
     <div class="nav-item active" onclick="filterCat(null,this)">全部</div>
     <div class="nav-item" onclick="filterCat('大模型与基础研究',this)">🧠 大模型</div>
     <div class="nav-item" onclick="filterCat('产品与工具',this)">🛠️ 产品工具</div>
@@ -183,7 +112,7 @@ a:hover{color:var(--red)}
   <div id="catSections"></div>
   <div class="site-footer">
     <div>AI·简报 · 每日科技动态</div>
-    <div>内容来源于公开网络，仅供参考 · 生成于 <span id="genTime"></span></div>
+    <div>内容来源于公开网络，仅供参考 · 生成于 2026-03-13 08:30</div>
   </div>
 </div>
 
@@ -191,23 +120,133 @@ a:hover{color:var(--red)}
 
 <script>
 /* ══════════════════════════════════════════════════════
-   ↓↓↓ Claude 每次生成简报时，只替换此区块内的内容 ↓↓↓
+   每日替换区块 — 2026-03-13
    ══════════════════════════════════════════════════════ */
 const BRIEF_DATE = "2026-03-13";
-const BRIEF_ISSUE = "Vol.1";
+const BRIEF_ISSUE = "Vol.2";
 const NEWS_DATA = [
   {
-    "title": "这里是示例头条：请点击「生成今日简报」更新内容",
-    "desc": "这是一条示例新闻。每次在 Claude 中发出「生成今日简报」指令后，Claude 会自动搜索当日 AI 科技新闻，并输出替换这里的新闻数据，将新 index.html 推送至 GitHub 后朋友即可看到最新内容。",
+    "title": "开源AI智能体OpenClaw（「龙虾」）全面爆火，GitHub星标突破25万",
+    "desc": "开源AI智能体OpenClaw因图标为红色龙虾，被国内网友戏称「养龙虾」，可替人执行终端命令、收发邮件、管理日程，无需编程知识即可使用。两个月内GitHub星标突破25万，国内各大云厂商争相上线一键部署服务，腾讯、百度、京东云等均已入局。工信部及国家互联网应急中心已相继发布安全风险提示。",
+    "category": "产品与工具",
+    "time": "2026-03-13 10:05",
+    "source": "央视新闻",
+    "link": "https://news.bjd.com.cn/2026/03/13/11628576.shtml"
+  },
+  {
+    "title": "NVIDIA GTC 2026 下周开幕，黄仁勋将发表主题演讲，传将发布NemoClaw企业智能体平台",
+    "desc": "NVIDIA GTC 2026将于3月16至19日在美国圣何塞SAP中心举办，CEO黄仁勋将于3月16日上午11时发表主题演讲，内容预计涵盖AI基础设施、智能体AI及下一代Rubin GPU等。据悉NVIDIA拟发布面向企业的开源AI智能体平台NemoClaw，并已宣布向Mira Murati创办的Thinking Machines提供超1GW的Vera Rubin算力支持。",
+    "category": "行业与公司动态",
+    "time": "2026-03-13 08:00",
+    "source": "TechCrunch",
+    "link": "https://techcrunch.com/2026/03/12/how-to-watch-jensen-huangs-nvidia-gtc-2026-keynote/"
+  },
+  {
+    "title": "寒武纪2025年首次实现全年盈利，营收同比增长453%",
+    "desc": "国内AI芯片企业寒武纪发布2025年年报，实现营收64.97亿元，同比增长453.21%；归母净利润20.59亿元，为上市以来首次实现全年盈利，较2024年亏损4.52亿元实现根本性逆转。公司表示增长主要受益于AI算力需求持续攀升及产品竞争力提升。",
+    "category": "行业与公司动态",
+    "time": "2026-03-12 22:00",
+    "source": "新浪财经",
+    "link": "https://finance.sina.cn/2026-03-12/detail-inhqtyye1557636.d.html"
+  },
+  {
+    "title": "Atlassian宣布裁员10%约1600人，称以此「自筹资金」加码AI投入",
+    "desc": "澳大利亚企业软件公司Atlassian宣布裁员约1600名员工，占全球员工总数10%，同时计划削减部分办公空间，预计产生2.25亿至2.36亿美元相关费用。CEO Mike Cannon-Brookes在内部信中表示，此举旨在自筹资金加大AI与企业销售投入，并坦承AI已改变公司对技能结构和岗位数量的需求。Atlassian股价今年已累计下跌逾50%。",
+    "category": "行业与公司动态",
+    "time": "2026-03-11 19:34",
+    "source": "TechCrunch",
+    "link": "https://techcrunch.com/2026/03/12/atlassian-follows-blocks-footsteps-and-cuts-staff-in-the-name-of-ai/"
+  },
+  {
+    "title": "OpenClaw安全风险引监管关注，多所高校和银行相继发布禁用通知",
+    "desc": "随着OpenClaw在国内快速普及，其高系统权限特性引发安全隐患。工信部已发布「六要六不要」安全使用指引，国家互联网应急中心指出存在「提示词注入」「功能插件投毒」及远程代码执行等风险。珠海科技学院、安徽师范大学等多所高校已发布禁用通知，部分银行亦收到监管机构下发的风险提示函。",
+    "category": "开发者社区热议",
+    "time": "2026-03-13 10:00",
+    "source": "金融界",
+    "link": "https://www.cebnet.com.cn/20260313/103001633.html"
+  },
+  {
+    "title": "腾讯发布全系「龙虾」产品矩阵，马化腾朋友圈：「还有一批产品陆续赶来」",
+    "desc": "腾讯云3月9日上线WorkBuddy后因用户涌入导致服务不稳定，随后发布包含WorkBuddy、QClaw、腾讯云Lighthouse、智能体开发平台ADP及云桌面等在内的全系OpenClaw产品矩阵。据科创板日报，国产大模型阶跃星辰Step 3.5 Flash、Kimi K2.5、MiniMax M2.5包揽OpenRouter统计的OpenClaw调用量前三甲，阶跃星辰日调用量较30天前增长超20倍。",
+    "category": "产品与工具",
+    "time": "2026-03-11 00:00",
+    "source": "财联社",
+    "link": "https://www.cls.cn/detail/2309484"
+  },
+  {
+    "title": "xAI联合创始人离职潮持续，11名创始人将仅剩2人在岗",
+    "desc": "马斯克旗下AI公司xAI联合创始人ZiHang Dai（戴子航）本周离职，X个人资料中xAI徽章已消失；张国栋也表示计划数日内离职。此前Toby Pohlen、Jimmy Ba、Tony Wu及Greg Yang等多位联合创始人已于今年1月以来陆续离开，若张国栋离职，11名创始人中仅剩约2人在岗。",
+    "category": "行业与公司动态",
+    "time": "2026-03-13 00:00",
+    "source": "虎嗅",
+    "link": "https://xiuxiu.huxiu.com/hxgpt_agent/morning_daily/2026-03-13.html"
+  },
+  {
+    "title": "原阿里千问后训练负责人郁博文正式加入字节跳动Seed团队",
+    "desc": "据IT时代网报道，原阿里巴巴通义千问大模型后训练负责人郁博文已加入字节跳动，担任Seed团队视觉模型与多模态交互后训练负责人。郁博文于3月3日提交辞职申请，此前阿里通义实验室进行架构调整，将Qwen团队拆分为多个平行模块，导致其管理范围缩小。其职位由前Google DeepMind研究员周浩接任。",
+    "category": "行业与公司动态",
+    "time": "2026-03-12 00:00",
+    "source": "IT时代网",
+    "link": "https://xiuxiu.huxiu.com/hxgpt_agent/morning_daily/2026-03-13.html"
+  },
+  {
+    "title": "NVIDIA宣布向Nebius投资20亿美元，同时支持Mira Murati新公司超1GW算力",
+    "desc": "在GTC 2026召开前夕，NVIDIA宣布向AI云服务公司Nebius投资20亿美元；同时宣布支持前OpenAI CTO Mira Murati创办的Thinking Machines Lab，提供超过1吉瓦的Vera Rubin系统算力，用于前沿模型训练。此外NVIDIA据报道还计划向开源模型领域投入高达260亿美元。",
+    "category": "投融资与市场",
+    "time": "2026-03-12 00:00",
+    "source": "Fortune",
+    "link": "https://fortune.com/2026/03/12/nvidia-gtc-preview-the-real-march-madness-jensen-huang/"
+  },
+  {
+    "title": "算力租赁板块活跃，AI智能体商业化加速带动算力需求爆发",
+    "desc": "受AI智能体商业化落地加速影响，下游应用场景集中释放算力需求，算力租赁概念股3月12日表现活跃，宏景科技、中国能源建设等多股涨停，慧辰股份等跟涨。OpenClaw爆火后各大云厂商算力业务显著增长，百度云轻量服务器LS日增接近万量级，京东云OpenClaw用户规模单周增长超300%。",
+    "category": "投融资与市场",
+    "time": "2026-03-12 15:00",
+    "source": "中国证券报",
+    "link": "https://finance.sina.com.cn/stock/y/2026-03-13/doc-inhquwcu1219447.shtml"
+  },
+  {
+    "title": "OpenClaw在GTC 2026现场设「建龙虾」体验区，支持自定义部署专属AI智能体",
+    "desc": "NVIDIA将在GTC 2026（3月16-19日）园区设置「build-a-claw」体验活动，参会者可在NVIDIA专家协助下快速命名、配置并部署个人OpenClaw智能体，支持云端算力及自带DGX Spark或GeForce笔记本本地运行，现场还将销售相关NVIDIA硬件。这是OpenClaw首次大规模亮相国际顶级AI峰会。",
+    "category": "产品与工具",
+    "time": "2026-03-13 00:00",
+    "source": "NVIDIA Blog",
+    "link": "https://blogs.nvidia.com/blog/gtc-2026-news/"
+  },
+  {
+    "title": "NVIDIA Rubin GPU细节曝光：35-50 PetaFLOPS、22TB/s带宽，较Blackwell提升5倍",
+    "desc": "据The Register报道，NVIDIA下一代Rubin GPU已于CES 2026预告，搭载最高288GB HBM4显存，带宽达22TB/s，NVFP4精度下算力35-50 PetaFLOPS，浮点性能较Blackwell提升约5倍。NVIDIA亦将在GTC上介绍整合Groq收购所得流式计算技术的推理加速方案，以解决交互式推理场景下的效率瓶颈。",
     "category": "大模型与基础研究",
-    "time": "2026-03-13 09:00",
-    "source": "示例来源",
-    "link": ""
+    "time": "2026-03-13 00:00",
+    "source": "The Register",
+    "link": "https://www.theregister.com/2026/03/13/nvidia_gtc_2026_preview_tobias_mann_register/"
+  },
+  {
+    "title": "OpenClaw执行单次复杂任务可消耗上万元Token，「养虾热」催生付费卸载潮",
+    "desc": "央视报道指出，OpenClaw执行复杂任务时对Token消耗极高，为普通大模型的数倍乃至上百倍，有用户反映首次运行即消耗2000余万Token、花费数百元。与此同时高额使用费用引发「付费卸载潮」，Mac mini因「养虾」需求在华强北出现断货，普遍加价数百元。国内超算互联网平台已向OpenClaw用户免费发放1000万Token以降低门槛。",
+    "category": "开发者社区热议",
+    "time": "2026-03-13 10:05",
+    "source": "央视新闻",
+    "link": "https://news.bjd.com.cn/2026/03/13/11628576.shtml"
+  },
+  {
+    "title": "全国两会代表委员热议「龙虾」：每人未来或将拥有多个垂直AI智能体",
+    "desc": "OpenClaw在两会期间成为热议话题。中国工程院院士高文表示「连马化腾都没想到」；360创始人周鸿祎将AI智能体比作「实习生」，提醒需建立规则约束；首都经贸大学教授屈庆超预测未来每人可能「养」多个垂直类智能体，分别负责学习、规划生活和工作，并推动监管同步创新。",
+    "category": "开发者社区热议",
+    "time": "2026-03-08 00:00",
+    "source": "中新网",
+    "link": "https://www.chinanews.com.cn/cj/2026/03-08/10583594.shtml"
+  },
+  {
+    "title": "微软与Meta数据中心租赁承诺总额突破7000亿美元",
+    "desc": "微软与Meta Platforms在最近一个季度分别新增近500亿美元数据中心租赁承诺，用于支持AI算力基础设施扩张。包括甲骨文、亚马逊在内的全球最大云计算公司，对未来15至19年内数据中心租赁的总承诺金额已突破7000亿美元。",
+    "category": "国际科技动态",
+    "time": "2026-03-12 00:00",
+    "source": "华尔街见闻",
+    "link": "https://wallstreetcn.com/articles/3767388"
   }
 ];
-/* ══════════════════════════════════════════════════════
-   ↑↑↑ 以上区块由 Claude 每日自动替换 ↑↑↑
-   ══════════════════════════════════════════════════════ */
+/* ══════════════════════════════════════════════════════ */
 
 const CATS=[
   {name:'大模型与基础研究',icon:'🧠'},
@@ -222,7 +261,6 @@ let activeFilter=null;
 function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;')}
 
 function render(news){
-  // masthead meta
   const d=new Date(BRIEF_DATE+'T00:00:00');
   const wd=['日','一','二','三','四','五','六'][d.getDay()];
   document.getElementById('mastheadMeta').innerHTML=
@@ -230,9 +268,7 @@ function render(news){
   document.getElementById('dateMain').textContent=BRIEF_DATE.replace(/-/g,'.');
   document.title=`AI 科技简报 · ${BRIEF_DATE}`;
   document.getElementById('totalCount').textContent=news.length;
-  document.getElementById('genTime').textContent=new Date().toLocaleString('zh-CN');
 
-  // Lead: top 2
   const leads=news.slice(0,2);
   document.getElementById('leadSection').innerHTML=
     `<div class="section-label">今日头条</div>`+
@@ -248,7 +284,6 @@ function render(news){
         </div>
       </div>`).join('');
 
-  // Categories
   const rest=news.slice(2);
   const catsShow=activeFilter?CATS.filter(c=>c.name===activeFilter):CATS;
   document.getElementById('catSections').innerHTML=catsShow.map(cat=>{
